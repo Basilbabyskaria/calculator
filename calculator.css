@@ -1,0 +1,18 @@
+.btn{
+    background-color: rgb(97, 132, 163);
+    width: 3rem;
+    height: 3rem;
+    box-shadow: 1px 1px 2px 1px;
+}
+#lg-btn{
+    background-color: rgb(97, 132, 163);
+    height: 3rem;
+    width: 8rem;
+    box-shadow: 1px 1px 2px 1px;
+
+}
+#button-card{
+    border-radius: 1rem;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}

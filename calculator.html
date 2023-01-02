@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div class="container text-center">
+        <div class="row">
+          <div class="col"></div>
+          <div class="col">
+            <div class="card mt-5" style="width: 22rem; min-height: 35rem;background-color: rgb(197, 213, 228);">
+                <input id="display" type="text" placeholder="0" class="form-control container-fluid fs-1 mt-3  text-light " style=" text-align: end; background-color: rgb(197, 213, 228); height: 60px;">
+                <input id="result" type="text"  class="form-control container-fluid fs-1  text-light " style=" text-align: end; background-color: rgb(197, 213, 228); height: 60px;">
+                <div id="button-card" class=" align-self-center" style="width: 95%; min-height:20rem; background-color: rgb(222, 235, 244);margin-top: 5rem;">
+                    <table class="table"style="min-height: 100%; width:100%;">
+                        <tr>
+                            <td><button type="button" class="btn btn-lg mt-4" onclick="btn_press(7)">7</button></td>
+                            <td><button type="button" class="btn btn-lg mt-4" onclick="btn_press(8)">8</button></td>
+                            <td><button type="button" class="btn btn-lg mt-4" onclick="btn_press(9)">9</button></td>
+                            <td><button type="button" class="btn btn-lg mt-4" onclick="btn_press('/')">/</button></td>
+                        </tr>
+                        <tr>
+                            <td><button type="button" class="btn btn-lg"onclick="btn_press(4)">4</button></td>
+                            <td><button type="button" class="btn btn-lg"onclick="btn_press(5)">5</button></td>
+                            <td><button type="button" class="btn btn-lg"onclick="btn_press(6)">6</button></td>
+                            <td><button type="button" class="btn btn-lg" onclick="btn_press('*')">x</button></td>
+                        </tr>
+                        <tr>
+                            <td><button type="button" class="btn btn-lg"onclick="btn_press(1)">1</button></td>
+                            <td><button type="button" class="btn btn-lg"onclick="btn_press(2)">2</button></td>
+                            <td><button type="button" class="btn btn-lg"onclick="btn_press(3)">3</button></td>
+                            <td><button type="button" class="btn btn-lg"onclick="btn_press('-')">-</button></td>
+                        </tr>
+                        <tr>
+                            <td><button type="button" class="btn btn-lg"onclick="btn_press('.')">.</button></td>
+                            <td><button type="button" class="btn btn-lg"onclick="btn_press(0)">0</button></td>
+                            <td><button type="button" class="btn btn-lg"onclick="btn_press('%')">%</button></td>
+                            <td><button type="button" class="btn btn-lg"onclick="btn_press('+')">+</button></td>
+                        </tr>
+                        <tr>
+                            <td><button type="button" class="btn btn-lg" onclick="wipe()">C</button></td>
+                            <td><button type="button" class="btn btn-lg" onclick="back()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-backspace" viewBox="0 0 16 16">
+                                <path d="M5.83 5.146a.5.5 0 0 0 0 .708L7.975 8l-2.147 2.146a.5.5 0 0 0 .707.708l2.147-2.147 2.146 2.147a.5.5 0 0 0 .707-.708L9.39 8l2.146-2.146a.5.5 0 0 0-.707-.708L8.683 7.293 6.536 5.146a.5.5 0 0 0-.707 0z"/>
+                                <path d="M13.683 1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-7.08a2 2 0 0 1-1.519-.698L.241 8.65a1 1 0 0 1 0-1.302L5.084 1.7A2 2 0 0 1 6.603 1h7.08zm-7.08 1a1 1 0 0 0-.76.35L1 8l4.844 5.65a1 1 0 0 0 .759.35h7.08a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1h-7.08z"/>
+                                 </svg></button></td>
+                            <td colspan="2"><button type="button" class="btn btn-lg "id="lg-btn" onclick="equals()">=</button></td>
+                        </tr>
+
+                    </table>
+                </div>
+            </div>
+          </div>
+          <div class="col"></div>
+        </div>
+      </div>
+      <script src="./calculator.js"> </script>
+</html>
